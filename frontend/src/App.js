@@ -1,3 +1,5 @@
+
+import './App.css';
 import MyTodos from "./component/MyTodos";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
