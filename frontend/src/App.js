@@ -1,16 +1,11 @@
+import MyTodos from "./component/MyTodos";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className="container"  >
-      <h1> Add ToDo </h1>
-     
-     
-</div>
-
-
-
-
-    
+    <div className="App">
+      <MyTodos />
+    </div>
   );
 }
 
