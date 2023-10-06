@@ -1,12 +1,12 @@
 
 import './App.css';
-import MyTodos from "./component/MyTodos";
+import TodosList from "./component/TodosList";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
-      <MyTodos />
+      <TodosList />
     </div>
   );
 }
