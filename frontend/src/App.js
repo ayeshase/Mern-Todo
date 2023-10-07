@@ -1,5 +1,5 @@
 import './App.css';
-//import TodosList from "./component/TodosList";
+import Todos from "./component/Todos";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -8,16 +8,17 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-      <h1>ToDo App</h1>
+        <h1>ToDo App</h1>
         <div className='top'>
-<input type='text' placeholder='Add Todos...' />
-<div className='add'>Add</div>
-       </div>
-      <div className='list'>
-
-       
+          <input type='text' placeholder='Add Todos...' />
+          <div className='add'>Add</div>
         </div>
-     </div>
+        <div className='list'>
+          <Todos />
+
+
+        </div>
+      </div>
 
     </div>
   );
