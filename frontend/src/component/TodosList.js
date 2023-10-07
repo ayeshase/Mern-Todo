@@ -1,39 +1,20 @@
 import React, { useState } from 'react'
-import AddToDos from './ToDos/AddToDos'
-
-
+import { BsFillPencilFill } from "react-icons/bs";
+import { BsFillTrashFill } from "react-icons/bs";
 
 
 const TodosList = () => {
-  const [modal, setModal] = useState(false);
-  const [todoList, setTodoList] = useState([]);
+return (
+    <div className='todo'>
+      <div className='text'>{text}</div>
+      <div className='icons'>
+      <BsFillPencilFill className="icon" onClick={updateMode} />
+          <BsFillTrashFill className="icon" onClick={deleteTodo} />
+      
 
-
-  const toggle = () => {
-    setModal(!modal)
-  }
-
-  const saveTodo = (todoObj) => {
-    let tempList = todoList
-    tempList.push(todoObj)
-    setTodoList(tempList)
-    setModal(false)
-  }
-
-  return (
-    <>
-      <div className='header text-center'>
-        <h3>ToDo List</h3>
-        <button className='btn btn-primary mt-2' onClick={() => setModal(true)}>Add ToDos</button>
       </div>
-     
-
-        {todoList.map((obj) => <li>{obj.Name}</li>)}
-    
-      <AddToDos toggle={toggle} modal={modal} save={saveTodo} />
-
-    </>
+    </div>
   )
-}
+} 
 
 export default TodosList
