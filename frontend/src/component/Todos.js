@@ -5,6 +5,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 
 const Todos = (text, updateMode, deleteTodo) => {
 return (
+  <>
     <div className='todo'>
       <div className='text'>{text}</div>
       <div className='icons'>
@@ -14,6 +15,7 @@ return (
 
       </div>
     </div>
+    </>
   )
 } 
 
