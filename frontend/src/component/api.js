@@ -12,4 +12,8 @@ const getAllTodo = (setTodo) => {
 
     })
 }
-export {getAllTodo}
+
+const addToDo = () => {
+
+}
+export {getAllTodo, addToDo}
