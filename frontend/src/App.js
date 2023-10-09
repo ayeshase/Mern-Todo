@@ -24,7 +24,7 @@ function App() {
         <h1>ToDo App</h1>
         <div className='top'>
           <input type='text' placeholder='Add Todos...'  value={text} onChange={(e) => setText(e.target.value)}/>
-          <div className='add' onClick={addToDo} >Add</div>
+          <div className='add' onClick={() => addToDo(text, setText, setTodo)} >Add</div>
         </div>
 <div className='list'>
  {toDos.map((item) => <Todos  key={item._id}   text={item.text}/>)}   

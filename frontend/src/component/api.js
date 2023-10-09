@@ -13,7 +13,14 @@ const getAllTodo = (setTodo) => {
     })
 }
 
-const addToDo = () => {
+const addToDo = (text, setText, setTodo) => {
+    axios
+    .post(`${baseUrl}/save`, {text})
+    .then((data) => {
+        console.log(data);
+        setText("")
+        getAllTodo(setTodo)
+    })
 
 }
 export {getAllTodo, addToDo}
