@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Todos from "./component/Todos";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { addToDo, getAllTodo,  updateToDo, deleteTodo} from './component/api';
+import { addToDo, getAllTodo,  updateToDo, deleteToDo} from './component/api';
 
 
 function App() {
@@ -16,10 +16,10 @@ function App() {
     getAllTodo(setToDo)
   }, [])
 
-  const updateMode = (id, text) => {
+  const updateMode = (_id, text) => {
     setIsUpdating(true)
     setText(text)
-    setToDoId(id)
+    setToDoId(_id)
 
 
   }
@@ -46,10 +46,10 @@ function App() {
           </div>
           <div className='list'>
             {toDo.map((item) =>  
-             < Todos key={item.id} 
+             < Todos key={item._id} 
              text={item.text}
-             updateMode = {() => updateMode(item.id, item.text) }
-             
+             updateMode = {() => updateMode(item._id, item.text) }
+             deleteToDo={() => deleteToDo(item._id, setToDo)}
              />)}
           </div>
         </div>
